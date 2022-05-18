@@ -86,7 +86,7 @@ internal static class DataProcessor
     var daily = new Dictionary<DateTime, int>();
 
     var minDate = periods.Min(e => e.Start.Date);
-    var maxDate = periods.Max(e => e.Start.Date);
+    var maxDate = periods.Max(e => e.End.Date);
 
     for (var date = minDate; date <= maxDate; date = date.AddDays(1))
     {
