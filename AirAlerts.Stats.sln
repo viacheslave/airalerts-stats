@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{80A0FA2C-E683-4E8E-87DF-6E146601CD72}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirAlerts.Stats", "src\AirAlerts.Stats\AirAlerts.Stats.csproj", "{0D32128F-F6BF-455A-A2DF-643965431046}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirAlerts.Stats.Tests", "tests\AirAlerts.Stats.Tests\AirAlerts.Stats.Tests.csproj", "{59D816C3-53CC-42BC-B883-B1410171AC52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resources", "resources", "{4E335818-E245-42C7-A908-D33AC929F613}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "plots", "plots", "{607DDA40-3000-4D98-B607-C8BE122A8D13}"
+	ProjectSection(SolutionItems) = preProject
+		resources\plots\daily-14.png = resources\plots\daily-14.png
+		resources\plots\daily-30.png = resources\plots\daily-30.png
+		resources\plots\daily-7.png = resources\plots\daily-7.png
+		resources\plots\daily.png = resources\plots\daily.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D32128F-F6BF-455A-A2DF-643965431046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D32128F-F6BF-455A-A2DF-643965431046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D32128F-F6BF-455A-A2DF-643965431046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D32128F-F6BF-455A-A2DF-643965431046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59D816C3-53CC-42BC-B883-B1410171AC52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59D816C3-53CC-42BC-B883-B1410171AC52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59D816C3-53CC-42BC-B883-B1410171AC52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59D816C3-53CC-42BC-B883-B1410171AC52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{59D816C3-53CC-42BC-B883-B1410171AC52} = {80A0FA2C-E683-4E8E-87DF-6E146601CD72}
+		{607DDA40-3000-4D98-B607-C8BE122A8D13} = {4E335818-E245-42C7-A908-D33AC929F613}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {353F0700-3EE3-47F8-AEE8-01B6F6250E01}
+	EndGlobalSection
+EndGlobal
