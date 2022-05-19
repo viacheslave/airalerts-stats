@@ -4,13 +4,13 @@ namespace AirAlerts.Stats;
 
 internal static class DataProcessor
 {
-  internal static async Task<IReadOnlyList<Event>> GetEvents(IAsyncEnumerable<Message> messages)
+  internal static IReadOnlyList<Event> GetEvents(IEnumerable<Message> messages)
   {
     var regex = new Regex("(?<time>\\d{2}:\\d{2})\\s(?<content>.*)\\s(?<tag>#(Харківська_область|Харківський_район))", RegexOptions.Multiline);
 
     var events = new List<Event>();
 
-    await foreach (var message in messages)
+    foreach (var message in messages)
     {
       var text = message.Text.Replace('\n', ' ');
 

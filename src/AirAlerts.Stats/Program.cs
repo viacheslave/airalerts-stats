@@ -1,10 +1,10 @@
-﻿using AirAlerts.Stats;
+using AirAlerts.Stats;
 
 var client = await new ClientProvider().Get();
-var dataProvider = new DataProvider(client);
-var messages = dataProvider.Get();
+var dataProvider = new DataProvider(new TelegramDataProvider(client), new LocalDataProvider());
+var messages = await dataProvider.Get();
 
-var regionalEvents = await DataProcessor.GetEvents(messages);
+var regionalEvents = DataProcessor.GetEvents(messages);
 var compactedEvents = DataProcessor.Compact(regionalEvents);
 var periods = DataProcessor.GetPeriods(compactedEvents);
 

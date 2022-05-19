@@ -1,48 +1,37 @@
-using TL;
-using WTelegram;
-
 namespace AirAlerts.Stats;
 
 internal class DataProvider
 {
-  private readonly Client _client;
-  private readonly InputPeerChannel _channel;
-
   // reliable data starts on March 15th, 2022
   private static readonly DateTime _startDate = new(2022, 03, 15);
 
-  public DataProvider(Client client)
-  {
-    _client = client;
+  private readonly ITelegramDataProvider _telegramDataProvider;
+  private readonly ILocalDataProvider _localDataProvider;
 
-    // Air alerts channel
-    // TODO: abstract
-    _channel = new InputPeerChannel(1766138888, -4234079108947491235);
+  public DataProvider(ITelegramDataProvider telegramDataProvider,
+    ILocalDataProvider localDataProvider)
+  {
+    _telegramDataProvider = telegramDataProvider;
+    _localDataProvider = localDataProvider;
   }
 
-  internal async IAsyncEnumerable<Message> Get()
+  internal async Task<IEnumerable<Message>> Get()
   {
-    const int limit = 100;
-    var offset = 0;
+    var messages = _localDataProvider.GetLocal();
 
-    while (true)
-    {
-      Messages_MessagesBase data = await _client.Messages_GetHistory(_channel, limit: limit, add_offset: offset);
-      foreach (var message in data.Messages)
-      {
-        if (message is not TL.Message)
-        {
-          continue;
-        }
+    var startDate = messages.Any()
+      ? messages.Max(x => x.Date.Date).AddDays(-1)
+      : _startDate;
 
-        var tlMessage = (TL.Message)message;
-        yield return new Message(message.ID, message.Date, tlMessage.message);
-      }
+    var fetched = await _telegramDataProvider.Fetch(startDate);
 
-      if (data.Messages[^1].Date < _startDate)
-        break;
+    messages = messages.Concat(fetched)
+      .DistinctBy(m => m.Id)
+      .OrderByDescending(m => m.Id)
+      .ToList();
 
-      offset += limit;
-    }
+    _localDataProvider.SaveLocal(messages);
+
+    return messages;
   }
 }
