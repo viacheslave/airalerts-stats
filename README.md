@@ -15,7 +15,7 @@ Kharkiv, May 19th, 2022
 
 Lviv, May 19th, 2022
 
-<img src="./resources/plots/daily-7.png" width="600" height="450" />
+<img src="./resources/plots/daily-7-lviv.png" width="600" height="450" />
 
 ## Requirements
 
