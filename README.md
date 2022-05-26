@@ -6,16 +6,16 @@ The tools grabs the Telegram's [AirAlerts](https://t.me/air_alert_ua) channel da
 
 ## Results
 
-Kharkiv, May 19th, 2022
+Kharkiv, May 26th, 2022
 
-<img src="./resources/plots/daily.png" width="600" height="450" />
-<img src="./resources/plots/daily-7.png" width="600" height="450" />
-<img src="./resources/plots/daily-14.png" width="600" height="450" />
-<img src="./resources/plots/daily-30.png" width="600" height="450" />
+<img src="./resources/plots/kh-20220526-daily.png" width="600" height="450" />
+<img src="./resources/plots/kh-20220526-daily-7.png" width="600" height="450" />
+<img src="./resources/plots/kh-20220526-daily-14.png" width="600" height="450" />
+<img src="./resources/plots/kh-20220526-daily-30.png" width="600" height="450" />
 
 Lviv, May 19th, 2022
 
-<img src="./resources/plots/daily-7-lviv.png" width="600" height="450" />
+<img src="./resources/plots/lv-20220519-daily-7.png" width="600" height="450" />
 
 ## Requirements
 
