@@ -8,14 +8,14 @@ The tools grabs the Telegram's [AirAlerts](https://t.me/air_alert_ua) channel da
 
 Kharkiv, June 3rd, 2022
 
-<img src="./resources/plots/kh-20220603-daily.png" width="600" height="450" />
-<img src="./resources/plots/kh-20220603-daily-7.png" width="600" height="450" />
-<img src="./resources/plots/kh-20220603-daily-14.png" width="600" height="450" />
-<img src="./resources/plots/kh-20220603-daily-30.png" width="600" height="450" />
+<img src="./resources/plots/kh-20220807-daily.png" width="600" height="450" />
+<img src="./resources/plots/kh-20220807-daily-7.png" width="600" height="450" />
+<img src="./resources/plots/kh-20220807-daily-14.png" width="600" height="450" />
+<img src="./resources/plots/kh-20220807-daily-30.png" width="600" height="450" />
 
 Lviv, May 19th, 2022
 
-<img src="./resources/plots/lv-20220519-daily-7.png" width="600" height="450" />
+<img src="./resources/plots/lv-20220807-daily-7.png" width="600" height="450" />
 
 ## Requirements
 
